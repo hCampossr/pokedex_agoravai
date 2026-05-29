@@ -1,7 +1,11 @@
-def save():     # Função de salvar os arquivos
-    dados = {
-        "proxid": proxid,       # guarda o valor da variável de alteração do id
-        "pokemon": [asdict(p) for p in pokedex]     #Transforma pokemon em dicionários, pois json não reconhece classes
+import json
+import dados
+from dataclasses import asdict
+
+def save():
+    conteudo = {
+        "proxid": dados.proxid,
+        "pokemon": [asdict(p) for p in dados.pokedex]
     }
     with open("pokedex.json", "w", encoding="utf-8") as f:
-        json.dump(dados, f, ensure_ascii=False, indent=4)       # Garante que os dados sejam salvos formatados
+        json.dump(conteudo, f, ensure_ascii=False, indent=4)
