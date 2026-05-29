@@ -46,3 +46,26 @@ while True:
             "3 - Atualizar as informações de um Pokémon\n"
             "4 - Remover Pokémon (ID)\n\n"
             "0 - Sair\n\n"))
+        
+        if menu == 1:
+            menu_add()
+
+        elif menu == 2:
+           menu_list()
+
+        elif menu == 3:
+            menu_att()
+
+        elif menu == 4:
+            menu_del()
+
+        elif menu == 0:
+            print("\nENCERRANDO... Até breve!")
+            break
+
+        else:
+            print("\nInválido, digite um número entre 0 e 4")
+            voltar()
+    except ValueError:
+        print("\nErro: Por favor, digite apenas números para opções e IDs.")
+
