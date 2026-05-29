@@ -1,24 +1,8 @@
-#Bibliotecas utilizadas para a criação e manipulação de dicionários, classes e arquivos json
-import os
-import json
-from dataclasses import dataclass, asdict
+from load import load
 from add_funcao import menu_add
 from att_funcao import menu_att
 from lista_delet_menu import menu_list, menu_del
-from load import load
-from save import save
-from telasl import limpar_term, voltar
-
-@dataclass
-class Pokemon:      # Criação da classe pokemon, que é composta por diversos tipos de dados
-    id: int
-    nome: str
-    tipo: str
-    nivel: int
-
-
-pokedex = []        # Criação da pokedex, lista que vai guardar todos os pokemon
-proxid = 1          # Variável de alteração de ID para cada pokémon criado
+from telas import limpar_term, voltar
 
 load()
 
@@ -35,20 +19,15 @@ while True:
 
         if menu == 1:
             menu_add()
-
         elif menu == 2:
-           menu_list()
-
+            menu_list()
         elif menu == 3:
             menu_att()
-
         elif menu == 4:
             menu_del()
-
         elif menu == 0:
             print("\nENCERRANDO... Até breve!")
             break
-
         else:
             print("\nInválido, digite um número entre 0 e 4")
             voltar()
