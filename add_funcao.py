@@ -19,3 +19,5 @@ def menu_add():     # Função de adicionar pokemon, item por item
             print("\n " + novo_pokemon.nome + " cadastrado com sucesso!")
     except ValueError:
         print("Insira um nivel válido.")
+
+    voltar()
