@@ -1,38 +1,4 @@
-[
-  {
-    "id": 1,
-    "nome": "Bulbasaur",
-    "tipo": "Planta/Veneno",
-    "nivel": 5
-  },
-  {
-    "id": 4,
-    "nome": "Charmander",
-    "tipo": "Fogo",
-    "nivel": 5
-  },
-  {
-    "id": 7,
-    "nome": "Squirtle",
-    "tipo": "Água",
-    "nivel": 5
-  },
-  {
-    "id": 25,
-    "nome": "Pikachu",
-    "tipo": "Elétrico",
-    "nivel": 10
-  },
-  {
-    "id": 133,
-    "nome": "Eevee",
-    "tipo": "Normal",
-    "nivel": 12
-  },
-  {
-    "id": 150,
-    "nome": "Mewtwo",
-    "tipo": "Psíquico",
-    "nivel": 70
-  }
-]
+{
+    "proxid": 2,
+    "pokemon": []
+}
