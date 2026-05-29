@@ -1,4 +1,5 @@
 def menu_att():
+    limpar_term()
     print("--- ATUALIZAR FICHA DE UM POKEMON ---\n")
     if not pokedex:
         print("Não há Pokémon cadastrado...")
