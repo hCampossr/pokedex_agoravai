@@ -1,15 +1,15 @@
+import json
+import os
+import dados
+from dados import Pokemon
 
-def load():     # Função de carregamento das informações guardadas
-    global proxid, pokedex      # Usa variáveis já declaradas na função main
-    if os.path.exists("pokedex.json"):      # Só carrega se o arquivo que salva as informações existe na pasta
-
-        # Todos os try do código são para segurança, o arquivo não vai crashar se o código não encontrar o que quer
+def load():
+    if os.path.exists("pokedex.json"):
         try:
             with open("pokedex.json", "r", encoding="utf-8") as f:
-                dados = json.load(f)
-                proxid = dados.get("proxid", 1)
-                # transforma cada item em forma de dicionário da pokedex e converte em objetos
-                pokedex = [Pokemon(**p) for p in dados.get("pokemon", [])]
+                conteudo = json.load(f)
+                dados.proxid = conteudo.get("proxid", 1)
+                dados.pokedex = [Pokemon(**p) for p in conteudo.get("pokemon", [])]
         except (json.JSONDecodeError, KeyError):
-            pokedex = []
-            proxid = 1
+            dados.pokedex = []
+            dados.proxid = 1
