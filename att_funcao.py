@@ -1,18 +1,20 @@
+import dados
+from telas import limpar_term, voltar
+from save import save
+
 def menu_att():
     limpar_term()
     print("--- ATUALIZAR FICHA DE UM POKEMON ---\n")
-    if not pokedex:
+    if not dados.pokedex:
         print("Não há Pokémon cadastrado...")
     else:
-        for p in pokedex:
+        for p in dados.pokedex:
             print("\nID: " + str(p.id) + "\nNome: " + p.nome)
         try:
             id_att = int(input("\nQual Pokémon (ID) você deseja atualizar?\n"))
-            # a variável encontrado foi ideia da IA, evita problemas de localizar ids já excluídos
             encontrado = False
 
-
-            for p in pokedex:
+            for p in dados.pokedex:
                 if id_att == p.id:
                     encontrado = True
                     selec_att = input("O que você deseja atualizar?: \n"
@@ -29,6 +31,7 @@ def menu_att():
                     else:
                         print("Fim da atualização")
 
+                    save()
                     print("Pokemon atualizado na Pokedex!")
                     break
             if not encontrado:
@@ -36,3 +39,4 @@ def menu_att():
 
         except ValueError:
             print("Digite um ID válido.")
+    voltar()
