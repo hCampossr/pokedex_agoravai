@@ -1,0 +1,14 @@
+def load():     # Função de carregamento das informações guardadas
+    global proxid, pokedex      # Usa variáveis já declaradas na função main
+    if os.path.exists("pokedex.json"):      # Só carrega se o arquivo que salva as informações existe na pasta
+
+        # Todos os try do código são para segurança, o arquivo não vai crashar se o código não encontrar o que quer
+        try:
+            with open("pokedex.json", "r", encoding="utf-8") as f:
+                dados = json.load(f)
+                proxid = dados.get("proxid", 1)
+                # transforma cada item em forma de dicionário da pokedex e converte em objetos
+                pokedex = [Pokemon(**p) for p in dados.get("pokemon", [])]
+        except (json.JSONDecodeError, KeyError):
+            pokedex = []
+            proxid = 1
