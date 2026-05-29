@@ -1,3 +1,4 @@
+
 def load():     # Função de carregamento das informações guardadas
     global proxid, pokedex      # Usa variáveis já declaradas na função main
     if os.path.exists("pokedex.json"):      # Só carrega se o arquivo que salva as informações existe na pasta
