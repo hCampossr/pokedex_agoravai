@@ -33,3 +33,16 @@ def menu_del():
         except ValueError:
             print("Digite um ID válido.")
     voltar()
+
+load()
+
+while True:
+    limpar_term()
+    print("====== SEJA BEM VINDO À POKEDEX ======\n\nO que deseja fazer?\n")
+    try:
+        menu = int(input(
+            "1 - Adicionar um Pokemon\n"
+            "2 - Listar os Pokémon cadastrados\n"
+            "3 - Atualizar as informações de um Pokémon\n"
+            "4 - Remover Pokémon (ID)\n\n"
+            "0 - Sair\n\n"))
