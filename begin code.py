@@ -5,7 +5,9 @@ from dataclasses import dataclass, asdict
 from add_funcao import menu_add
 from att_funcao import menu_att
 from lista_delet_menu import menu_list, menu_del
-from
+from load import load
+from save import save
+from telasl import limpar_term, voltar
 
 @dataclass
 class Pokemon:      # Criação da classe pokemon, que é composta por diversos tipos de dados
@@ -17,6 +19,8 @@ class Pokemon:      # Criação da classe pokemon, que é composta por diversos 
 
 pokedex = []        # Criação da pokedex, lista que vai guardar todos os pokemon
 proxid = 1          # Variável de alteração de ID para cada pokémon criado
+
+load()
 
 while True:
     limpar_term()
