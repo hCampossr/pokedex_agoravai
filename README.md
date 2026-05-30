@@ -3,7 +3,7 @@ funciona a partir de um menu, com opções que manipulam um arquivo .json da pok
 
 Membros:
 Rafael Taffo
-Loreno Cunha
+Lorenzo Cunha
 Henrique Campos
 
 Funções:
